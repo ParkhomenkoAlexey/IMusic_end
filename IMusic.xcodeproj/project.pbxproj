@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2D608676D8501A34F5B414 /* Pods_IMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB67C49231657354F461811 /* Pods_IMusic.framework */; };
 		F027F2882300740500AE2985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027F2872300740500AE2985 /* AppDelegate.swift */; };
 		F027F28A2300740500AE2985 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027F2892300740500AE2985 /* SceneDelegate.swift */; };
 		F027F28C2300740500AE2985 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027F28B2300740500AE2985 /* ViewController.swift */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A1919BC75CBF33FF9FA835F /* Pods-IMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMusic.release.xcconfig"; path = "Target Support Files/Pods-IMusic/Pods-IMusic.release.xcconfig"; sourceTree = "<group>"; };
+		7DC8FD6CE9A48915989CFE90 /* Pods-IMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMusic.debug.xcconfig"; path = "Target Support Files/Pods-IMusic/Pods-IMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		EAB67C49231657354F461811 /* Pods_IMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F027F2842300740500AE2985 /* IMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F027F2872300740500AE2985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F027F2892300740500AE2985 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2D608676D8501A34F5B414 /* Pods_IMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0301C74E9F7D4D2638327589 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DC8FD6CE9A48915989CFE90 /* Pods-IMusic.debug.xcconfig */,
+				0A1919BC75CBF33FF9FA835F /* Pods-IMusic.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D18E832DC216B0D1BB91C5A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAB67C49231657354F461811 /* Pods_IMusic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F027F27B2300740500AE2985 = {
 			isa = PBXGroup;
 			children = (
 				F027F2862300740500AE2985 /* IMusic */,
 				F027F2852300740500AE2985 /* Products */,
+				0301C74E9F7D4D2638327589 /* Pods */,
+				D18E832DC216B0D1BB91C5A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F027F2982300740600AE2985 /* Build configuration list for PBXNativeTarget "IMusic" */;
 			buildPhases = (
+				02C372107B1B599F48C54F77 /* [CP] Check Pods Manifest.lock */,
 				F027F2802300740500AE2985 /* Sources */,
 				F027F2812300740500AE2985 /* Frameworks */,
 				F027F2822300740500AE2985 /* Resources */,
+				2B31BCBEFF66AFEF820362EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02C372107B1B599F48C54F77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMusic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B31BCBEFF66AFEF820362EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMusic/Pods-IMusic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMusic/Pods-IMusic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IMusic/Pods-IMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F027F2802300740500AE2985 /* Sources */ = {
@@ -290,6 +359,7 @@
 		};
 		F027F2992300740600AE2985 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DC8FD6CE9A48915989CFE90 /* Pods-IMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +378,7 @@
 		};
 		F027F29A2300740600AE2985 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A1919BC75CBF33FF9FA835F /* Pods-IMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
