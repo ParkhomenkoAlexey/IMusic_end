@@ -14,7 +14,7 @@ struct TrackModel {
     var artistName: String
 }
 
-class SearchViewController: UITableViewController {
+class SearchMusicViewController: UITableViewController {
     
     var networkService = NetworkService()
     private var timer: Timer?
@@ -51,10 +51,9 @@ class SearchViewController: UITableViewController {
         cell.imageView?.image = #imageLiteral(resourceName: "Image")
         return cell
     }
-    
 }
 
-extension SearchViewController: UISearchBarDelegate {
+extension SearchMusicViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 //        print(searchText)
