@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		F027F2942300740600AE2985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F027F2922300740600AE2985 /* LaunchScreen.storyboard */; };
 		F027F29C230074DA00AE2985 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027F29B230074DA00AE2985 /* MainTabBarController.swift */; };
 		F027F29E230075DA00AE2985 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027F29D230075DA00AE2985 /* SearchViewController.swift */; };
+		F027F2A02300AFA100AE2985 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027F29F2300AFA100AE2985 /* SearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F027F2952300740600AE2985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F027F29B230074DA00AE2985 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		F027F29D230075DA00AE2985 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F027F29F2300AFA100AE2985 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,6 @@
 				7DC8FD6CE9A48915989CFE90 /* Pods-IMusic.debug.xcconfig */,
 				0A1919BC75CBF33FF9FA835F /* Pods-IMusic.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -90,6 +91,7 @@
 				F027F28B2300740500AE2985 /* ViewController.swift */,
 				F027F29B230074DA00AE2985 /* MainTabBarController.swift */,
 				F027F29D230075DA00AE2985 /* SearchViewController.swift */,
+				F027F29F2300AFA100AE2985 /* SearchResponse.swift */,
 				F027F28D2300740500AE2985 /* Main.storyboard */,
 				F027F2902300740600AE2985 /* Assets.xcassets */,
 				F027F2922300740600AE2985 /* LaunchScreen.storyboard */,
@@ -215,6 +217,7 @@
 			files = (
 				F027F29E230075DA00AE2985 /* SearchViewController.swift in Sources */,
 				F027F28C2300740500AE2985 /* ViewController.swift in Sources */,
+				F027F2A02300AFA100AE2985 /* SearchResponse.swift in Sources */,
 				F027F2882300740500AE2985 /* AppDelegate.swift in Sources */,
 				F027F29C230074DA00AE2985 /* MainTabBarController.swift in Sources */,
 				F027F28A2300740500AE2985 /* SceneDelegate.swift in Sources */,
