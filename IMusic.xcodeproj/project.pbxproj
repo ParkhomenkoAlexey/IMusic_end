@@ -31,6 +31,7 @@
 		F05B75192301D8E70086B117 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05B75122301D8E70086B117 /* SearchInteractor.swift */; };
 		F05B752A2302076F0086B117 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F05B75292302076F0086B117 /* SearchViewController.storyboard */; };
 		F05B752C2302092C0086B117 /* UIViewController + Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05B752B2302092C0086B117 /* UIViewController + Storyboard.swift */; };
+		F07926CB230BFABC0007982A /* CMTime + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07926CA230BFABC0007982A /* CMTime + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		F05B75122301D8E70086B117 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		F05B75292302076F0086B117 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		F05B752B2302092C0086B117 /* UIViewController + Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Storyboard.swift"; sourceTree = "<group>"; };
+		F07926CA230BFABC0007982A /* CMTime + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMTime + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				F05B752B2302092C0086B117 /* UIViewController + Storyboard.swift */,
+				F07926CA230BFABC0007982A /* CMTime + Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				F027F2A02300AFA100AE2985 /* SearchResponse.swift in Sources */,
 				F05B75192301D8E70086B117 /* SearchInteractor.swift in Sources */,
 				F04590472304066000040A0C /* FooterView.swift in Sources */,
+				F07926CB230BFABC0007982A /* CMTime + Extension.swift in Sources */,
 				F045904323032E5F00040A0C /* TrackCell.swift in Sources */,
 				F027F2882300740500AE2985 /* AppDelegate.swift in Sources */,
 				F027F29C230074DA00AE2985 /* MainTabBarController.swift in Sources */,
