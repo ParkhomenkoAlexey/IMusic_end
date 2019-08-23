@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,6 +14,68 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WtD-IN-hWY">
+                    <rect key="frame" x="0.0" y="44" width="414" height="64"/>
+                    <subviews>
+                        <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6a-0Y-npo">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="opaqueSeparatorColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="GZ8-kn-29N"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-7O-KlZ">
+                            <rect key="frame" x="8" y="8" width="398" height="48"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="k1N-t4-lMf">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="T36-Pr-4Pz"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNI-e9-E3L">
+                                    <rect key="frame" x="64" y="0.0" width="210" height="48"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5l-5b-wJA">
+                                    <rect key="frame" x="290" y="0.0" width="44" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="oJa-76-93L"/>
+                                    </constraints>
+                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <state key="normal" image="pause"/>
+                                    <connections>
+                                        <action selector="playPauseAction:" destination="hmN-58-eLX" eventType="touchUpInside" id="c3b-Qm-83e"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaC-l8-Cvh">
+                                    <rect key="frame" x="350" y="0.0" width="48" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="xHh-kY-syf"/>
+                                    </constraints>
+                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <state key="normal" image="Right"/>
+                                    <connections>
+                                        <action selector="nextTrack:" destination="hmN-58-eLX" eventType="touchUpInside" id="H7I-2P-wNu"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="n6a-0Y-npo" secondAttribute="trailing" id="2JW-yq-L91"/>
+                        <constraint firstAttribute="trailing" secondItem="bZX-7O-KlZ" secondAttribute="trailing" constant="8" id="Eif-JW-7zf"/>
+                        <constraint firstItem="n6a-0Y-npo" firstAttribute="leading" secondItem="WtD-IN-hWY" secondAttribute="leading" id="Nhw-ox-hWZ"/>
+                        <constraint firstItem="bZX-7O-KlZ" firstAttribute="leading" secondItem="WtD-IN-hWY" secondAttribute="leading" constant="8" id="bg4-HT-bbT"/>
+                        <constraint firstItem="bZX-7O-KlZ" firstAttribute="top" secondItem="WtD-IN-hWY" secondAttribute="top" constant="8" id="kHa-rT-N5Y"/>
+                        <constraint firstItem="n6a-0Y-npo" firstAttribute="top" secondItem="WtD-IN-hWY" secondAttribute="top" id="kQp-SO-Dzd"/>
+                        <constraint firstAttribute="height" constant="64" id="kg4-UJ-Wno"/>
+                        <constraint firstAttribute="bottom" secondItem="bZX-7O-KlZ" secondAttribute="bottom" constant="8" id="uA9-rB-GB4"/>
+                    </constraints>
+                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WTb-F2-879">
                     <rect key="frame" x="30" y="44" width="354" height="788"/>
                     <subviews>
@@ -136,8 +199,11 @@
             </subviews>
             <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="WtD-IN-hWY" firstAttribute="top" secondItem="KVX-jJ-bbW" secondAttribute="top" id="3e4-hU-2oc"/>
                 <constraint firstItem="KVX-jJ-bbW" firstAttribute="trailing" secondItem="WTb-F2-879" secondAttribute="trailing" constant="30" id="BPT-8b-vVf"/>
                 <constraint firstItem="WTb-F2-879" firstAttribute="leading" secondItem="KVX-jJ-bbW" secondAttribute="leading" constant="30" id="KiL-pI-onI"/>
+                <constraint firstItem="KVX-jJ-bbW" firstAttribute="trailing" secondItem="WtD-IN-hWY" secondAttribute="trailing" id="T5j-Jl-9et"/>
+                <constraint firstItem="WtD-IN-hWY" firstAttribute="leading" secondItem="KVX-jJ-bbW" secondAttribute="leading" id="bho-bt-Cf1"/>
                 <constraint firstItem="WTb-F2-879" firstAttribute="top" secondItem="KVX-jJ-bbW" secondAttribute="top" id="cdy-ne-aac"/>
                 <constraint firstItem="KVX-jJ-bbW" firstAttribute="bottom" secondItem="WTb-F2-879" secondAttribute="bottom" constant="30" id="mgm-Ou-GcH"/>
             </constraints>
@@ -147,6 +213,12 @@
                 <outlet property="currentTimeLabel" destination="9me-gN-YV7" id="Xz6-T9-ofi"/>
                 <outlet property="currentTimeSlider" destination="toJ-Wr-i3B" id="2IP-2i-Jsp"/>
                 <outlet property="durationLabel" destination="Y0E-EL-eXv" id="mWM-2D-qYb"/>
+                <outlet property="maxizedStackView" destination="WTb-F2-879" id="Tdb-ZQ-bl8"/>
+                <outlet property="miniGoForwardButton" destination="KaC-l8-Cvh" id="Jyp-5G-ms5"/>
+                <outlet property="miniPlayPauseButton" destination="x5l-5b-wJA" id="Vp5-qk-ATa"/>
+                <outlet property="miniTrackImageView" destination="k1N-t4-lMf" id="vHJ-Ao-Khz"/>
+                <outlet property="miniTrackTitleLabel" destination="DNI-e9-E3L" id="yEK-WI-1oE"/>
+                <outlet property="miniTrackView" destination="WtD-IN-hWY" id="fRE-AN-bH6"/>
                 <outlet property="playPauseButton" destination="4Fe-dJ-l2F" id="WWr-AL-dxY"/>
                 <outlet property="trackImageView" destination="84r-el-Z6Q" id="iEw-uD-O5y"/>
                 <outlet property="trackTitleLabel" destination="Wit-A4-Jb7" id="vpK-Dt-ixC"/>
@@ -159,6 +231,7 @@
         <image name="Drag Down" width="37" height="12"/>
         <image name="Icon Min" width="7" height="12"/>
         <image name="IconMax" width="17" height="17"/>
+        <image name="Image" width="54.333332061767578" height="54.333332061767578"/>
         <image name="Left" width="34" height="20"/>
         <image name="Right" width="34" height="20"/>
         <image name="pause" width="57" height="57"/>

@@ -87,6 +87,8 @@ extension MainTabBarController: MainTabBarControllerDelegate {
                        animations: {
                         self.view.layoutIfNeeded()
                         self.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
+                        self.trackDetailView.miniTrackView.alpha = 0
+                        self.trackDetailView.maxizedStackView.alpha = 1
         },
                        completion: nil)
         
@@ -107,6 +109,8 @@ extension MainTabBarController: MainTabBarControllerDelegate {
                        animations: {
                         self.view.layoutIfNeeded()
                         self.tabBar.transform = .identity
+                        self.trackDetailView.miniTrackView.alpha = 1
+                        self.trackDetailView.maxizedStackView.alpha = 0
         },
                        completion: nil)
     }
