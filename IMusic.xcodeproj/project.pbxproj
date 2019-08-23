@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B2D608676D8501A34F5B414 /* Pods_IMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB67C49231657354F461811 /* Pods_IMusic.framework */; };
+		F01AC64F230FE10D00386E7F /* Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01AC64E230FE10D00386E7F /* Nib.swift */; };
 		F027F2882300740500AE2985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027F2872300740500AE2985 /* AppDelegate.swift */; };
 		F027F28A2300740500AE2985 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027F2892300740500AE2985 /* SceneDelegate.swift */; };
 		F027F28C2300740500AE2985 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027F28B2300740500AE2985 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		0A1919BC75CBF33FF9FA835F /* Pods-IMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMusic.release.xcconfig"; path = "Target Support Files/Pods-IMusic/Pods-IMusic.release.xcconfig"; sourceTree = "<group>"; };
 		7DC8FD6CE9A48915989CFE90 /* Pods-IMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMusic.debug.xcconfig"; path = "Target Support Files/Pods-IMusic/Pods-IMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		EAB67C49231657354F461811 /* Pods_IMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01AC64E230FE10D00386E7F /* Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nib.swift; sourceTree = "<group>"; };
 		F027F2842300740500AE2985 /* IMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F027F2872300740500AE2985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F027F2892300740500AE2985 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				F05B752B2302092C0086B117 /* UIViewController + Storyboard.swift */,
 				F07926CA230BFABC0007982A /* CMTime + Extension.swift */,
+				F01AC64E230FE10D00386E7F /* Nib.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				F04590472304066000040A0C /* FooterView.swift in Sources */,
 				F07926CB230BFABC0007982A /* CMTime + Extension.swift in Sources */,
 				F045904323032E5F00040A0C /* TrackCell.swift in Sources */,
+				F01AC64F230FE10D00386E7F /* Nib.swift in Sources */,
 				F027F2882300740500AE2985 /* AppDelegate.swift in Sources */,
 				F027F29C230074DA00AE2985 /* MainTabBarController.swift in Sources */,
 				F05B75152301D8E70086B117 /* SearchWorker.swift in Sources */,
