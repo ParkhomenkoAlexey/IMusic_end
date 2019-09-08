@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import SwiftUI
 
 protocol MainTabBarControllerDelegate: class {
     func minimizeTrackDetailController()
     func maximizeTrackDetailController(viewModel: SearchViewModel.Cell?)
 }
+
+
+
 
 class MainTabBarController: UITabBarController {
     
@@ -20,6 +24,9 @@ class MainTabBarController: UITabBarController {
     private var bottomAnchorConstraint: NSLayoutConstraint!
     let searchVC: SearchViewController = SearchViewController.loadFromStoryboard()
     let trackDetailView: TrackDetailView = TrackDetailView.loadFromNib()
+    
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +39,20 @@ class MainTabBarController: UITabBarController {
         
         searchVC.tabBarDelegate = self
         
+        
+        
+        
+        var library = Library()
+        library.tabBarDelegate = self
+        let host = UIHostingController(rootView: library)
+        host.tabBarItem.image = #imageLiteral(resourceName: "library")
+        host.tabBarItem.title = "Library"
+        
     
         viewControllers = [
-            generateViewController(rootViewController: searchVC, image: #imageLiteral(resourceName: "search"), title: "Search"),
-            generateViewController(rootViewController: ViewController(), image: #imageLiteral(resourceName: "library"), title: "Library")
+            host,
+            generateViewController(rootViewController: searchVC, image: #imageLiteral(resourceName: "search"), title: "Search")
+            
         ]
     }
     
@@ -86,7 +103,8 @@ extension MainTabBarController: MainTabBarControllerDelegate {
                        options: .curveEaseOut,
                        animations: {
                         self.view.layoutIfNeeded()
-                        self.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
+//                        self.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
+                        self.tabBar.alpha = 0.0
                         self.trackDetailView.miniTrackView.alpha = 0
                         self.trackDetailView.maxizedStackView.alpha = 1
         },
@@ -100,7 +118,6 @@ extension MainTabBarController: MainTabBarControllerDelegate {
         maximizedTopAnchorConstraint.isActive = false
         bottomAnchorConstraint.constant = view.frame.height
         minimizedTopAnchorConstraint.isActive = true
-        
         UIView.animate(withDuration: 0.5,
                        delay: 0,
                        usingSpringWithDamping: 0.7,
@@ -108,7 +125,8 @@ extension MainTabBarController: MainTabBarControllerDelegate {
                        options: .curveEaseOut,
                        animations: {
                         self.view.layoutIfNeeded()
-                        self.tabBar.transform = .identity
+//                        self.tabBar.transform = .identity
+                        self.tabBar.alpha = 1.0
                         self.trackDetailView.miniTrackView.alpha = 1
                         self.trackDetailView.maxizedStackView.alpha = 0
         },

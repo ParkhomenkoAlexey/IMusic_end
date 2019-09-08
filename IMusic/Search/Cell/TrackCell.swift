@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import SwiftUI
 
 protocol TrackCellViewModel {
     var iconUrlString: String? { get }
@@ -25,6 +26,7 @@ class TrackCell: UITableViewCell {
     
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var collectionNameLabel: UILabel!
+    @IBOutlet weak var addTrackButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,9 +36,21 @@ class TrackCell: UITableViewCell {
         super.prepareForReuse()
         
         trackImageView.image = nil
+        
     }
     
-    func set(viewModel: TrackCellViewModel) {
+    var cell: SearchViewModel.Cell?
+    
+    func set(viewModel: SearchViewModel.Cell) {
+        
+        self.cell = viewModel
+        let savedTracks = UserDefaults.standard.savedTracks()
+        let hasFavorited = savedTracks.firstIndex(where: { $0.trackName == self.cell?.trackName && $0.artistName == self.cell?.artistName }) != nil
+        if hasFavorited {
+            addTrackButton.isHidden = true
+        } else {
+            addTrackButton.isHidden = false
+        }
 
         trackNameLabel.text = viewModel.trackName
         artistNameLabel.text = viewModel.artistName
@@ -44,6 +58,24 @@ class TrackCell: UITableViewCell {
         
         guard let url = URL(string: viewModel.iconUrlString ?? "") else { return }
         trackImageView.sd_setImage(with: url, completed: nil)
+        
+    }
+    
+  
+    @IBAction func addTrackAction(_ sender: Any) {
+        print("saving into UserDefaults")
+        addTrackButton.isHidden = true
+        guard let cell = cell else { return }
+        var listOfTracks = UserDefaults.standard.savedTracks()
+        
+       
+        
+        
+        listOfTracks.append(cell)
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: listOfTracks, requiringSecureCoding: false) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: UserDefaults.favouriteTrackKey)
+        }
     }
     
 }

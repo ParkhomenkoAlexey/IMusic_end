@@ -25,7 +25,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     private var timer: Timer?
     
     private lazy var footerView = FooterView()
-    weak var tabBarDelegate: MainTabBarControllerDelegate?
+    var tabBarDelegate: MainTabBarControllerDelegate?
       
   // MARK: Setup
   
@@ -55,6 +55,13 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     setupSearchBar()
     searchBar(searchController.searchBar, textDidChange: "billie")
   }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        let tracks = UserDefaults.standard.savedTracks()
+//        searchBar(searchController.searchBar, textDidChange: "billie")
+//        table.reloadData()
+    }
     
     private func setupSearchBar() {
         navigationItem.searchController = searchController
